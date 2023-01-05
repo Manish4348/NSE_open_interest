@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% block content %}
+
+<!-- <form action="/action_page.php">
+    <label for="selectdate">Select Date:</label>
+    <input type="date" id="select" name="selectdate">
+    <input type="submit">
+</form> -->
+<!-- <form action="/post_input" method="get">
+    <input type="text" name="name">
+    <input type="submit">
+</form> -->
+<form action="">
+    <label for="selectdate">Select Date</label>
+    <input type="date" name="selectdate">
+    <input type="submit">
+    
+</form>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:first-child td {
+        vertical-align: middle;
+    }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<table>
+    {% for row in table %}
+        <tr>
+            {% for cell in row %}
+                <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% block content %}
+
+<!-- <form method="post">
+    <label for="stocks">Select a stock:</label>
+    <select name="stocks" id="stocks">
+        {% for stock in list %}
+            <option value="{{ stock }}">{{ stock }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Submit">
+</form> -->
+
+<form method="post" action="/process_form">
+    <label for="menu">Select an item:</label>
+    <select name="menu" id="menu">
+        <option value="item1">Nifty</option>
+        <option value="item2">Bank Nifty</option>
+        <option value="item3">Fin Nifty</option>
+        <option value="item4">USDINR</option>
+        <option value="item5">CRUDEOIL</option>
+        <option value="item6">NATURAL GAS</option>
+        <option value="item7">RELIANCE</option>
+        <option value="item8">HDFC BANK</option>
+        <option value="item9">HDFC</option>
+        <option value="item10">ICICI BANK</option>
+        <option value="item11">KOTAK BANK</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+<!-- <form method="post" action="/process_form">
+    <label for="menu">Select Security:</label>
+    <input type="text" list="menu-items" name="menu" id="menu">
+    <datalist id="menu-items">
+        <option value="Nifty">
+        <option value="Bank Nifty">
+        <option value="Fin Nifty">
+        <option value="USDINR">
+        <option value="CRUDEOIL">
+        <option value="NATURAL GAS">
+        <option value="RELIANCE">
+        <option value="HDFC BANK">
+        <option value="HDFC">
+        <option value="ICICI BANK">
+        <option value="KOTAK BANK">
+    </datalist>
+    <input type="submit" value="Submit">
+</form> -->
+
+
+
+{% endblock %}

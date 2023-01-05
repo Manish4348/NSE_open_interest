@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+<ul>
+  <li>Spot Price: {{ spot_price }}</li>
+  <li>Time: {{ time }}</li>
+  <li>PCR: {{ pcr }}</li>
+  <li>Total Call OI: {{ total_call_oi }}</li>
+  <li>Total Put OI: {{ total_put_oi }}</li>
+</ul>
+<div>
+  {{ plot_html | safe }}
+</div>  
+<div>
+  {{ plot2_html | safe }}
+</div>
+{% endblock %}
