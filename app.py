@@ -14,7 +14,7 @@ import plotly.graph_objects as go
 import plotly.offline as offline
 import plotly.express as px
 import pandas as pd
-from participants_wise_oi import ParticipantsWiseOi
+from participants_wise_oi import GetPwoiData
 
 
 app = Flask(__name__)
@@ -277,12 +277,13 @@ def naturalgas():
 
 @app.route('/pwi')
 def pwi():
-    data = ParticipantsWiseOi()
-    plot_data = data.fetch_participants_wise_oi()
-    plot_data2 = data.fetch_participants_wise_oi_graph2()
+    data = GetPwoiData()
+    pwoi_date = data.pwoi_date
+    plot_data = data.plot_graph1()
+    plot_data2 = data.plot_graph2
     plot_data3 = data.pie_chart_long()
     plot_data4 = data.pie_chart_short()
-    return render_template('pwi.html', plot_data=plot_data, plot_data2=plot_data2, plot_data3 = plot_data3, plot_data4=plot_data4)
+    return render_template('pwi.html',pwoi_date=pwoi_date, plot_data=plot_data, plot_data2=plot_data2, plot_data3 = plot_data3, plot_data4=plot_data4)
 @app.route("/timelapseoi")
 def timelapseoi():
     return render_template('timelapseoi.html')
@@ -311,4 +312,4 @@ def stocks():
     return render_template('stocks.html')
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run()
