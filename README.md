@@ -1,2 +1,0 @@
-# bullopear
-first_commit
