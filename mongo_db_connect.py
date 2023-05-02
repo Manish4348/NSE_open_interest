@@ -20,15 +20,6 @@ def get_range(lst, n):
     # Return the combined list
     return before + [n] + after
 
-# index_dict = {
-#         "NIFTY": {"slicer": 25, "lot_size": 50},
-#         "BANKNIFTY": {"slicer": 100, "lot_size": 25},
-#         "FINNIFTY": {"slicer": 25, "lot_size": 50},
-#         "USDINR": {
-#             "slicer": 0.1250,
-#             "lot_size": 1,
-#         },  #  USDINR is leveraged for 1000 USD for 1 Qty
-#     }
 
 index_dict = {
         "NIFTY": {"slicer": 25, "lot_size": 50},
