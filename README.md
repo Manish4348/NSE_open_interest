@@ -4,7 +4,7 @@
 
 You can use this repo to show live open interest/ change in live open interest for indices: 'NIFTY', 'BANKNIFTY', 'FINNIFTY' and currency: 'USDINR' and commodities: 'CRUDEOIL', 'NATURALGAS'. You can alseo change the url and also include other stock(like 'RELIANCE','SBIN') and indices.
 
-Find below the Useful url's that you can include to fetch OI data:
+Find below the Useful url's:
 1. Indices= https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY  #Replace 'NIFTY" with other indices to fetch data for that index, e.g. 'BANKNIFTY', 'FINNIFTY', 'MIDCPNIFTY'
 2. USDINR= https://www.nseindia.com/api/option-chain-currency?symbol=USDINR #Replace 'USDINR' with other cuurrency to fetch data for that currency, e.g. 'GBPINR', 'EURINR', 'JPYINR'
 3. CrudeOil= Post_Api: https://www.mcxindia.com/backpage.aspx/GetOptionChain, Payload: {'Commodity':'CRUDEOIL','Expiry':'15FEB2023'}  #change payload Expiry with current Expiry date
@@ -21,3 +21,5 @@ Find below the Useful url's that you can include to fetch OI data:
 
 #Feel free to drop any suggestions
 #This is the first version of the web app I have developed, and also hosted at www.Bullopear.com, You can also visit this website to view live OI
+
+#You can also visit 'https://www.youtube.com/@Bullopear' to view more local versions of this repo
