@@ -18,6 +18,7 @@ Find below the Useful url's:
 11. market status= https://nseindia.com/api/marketStatus
 12. nse fiidii daily cash data= https://www.nseindia.com/api/fiidiiTradeReact
 
+Addig sensex futures and options features soon.
 
 #Feel free to drop any suggestions
 #This is the first version of the web app I have developed, and also hosted at www.Bullopear.com, You can also visit this website to view live OI
