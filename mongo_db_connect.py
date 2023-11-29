@@ -47,7 +47,8 @@ class fetch_for_indices():
         # self.data = [doc for doc in docu][0]
 
         # for fetching directly from nse
-        url = f"https://www.nseindia.com/api/option-chain-indices?symbol={index}"
+        base_url = 'https://www.nseindia.com'
+        url = f"https://www.nseindia.com/api/option-chain-currency?symbol={index}" if index.upper() == 'USDINR' else f"https://www.nseindia.com/api/option-chain-indices?symbol={index}"
         headers = headers = {
         'Connection': 'keep-alive',
         'Cache-Control': 'max-age=0',
@@ -61,7 +62,9 @@ class fetch_for_indices():
         'Accept-Encoding': 'gzip, deflate, br',
         'Accept-Language': 'en-US,en;q=0.9,hi;q=0.8',
     }
-        response = requests.get(url, headers=headers)
+        r = requests.get(base_url, headers=headers)
+        cookies = dict(r.cookies) if r.status_code == 200 else {}
+        response = requests.get(url, headers=headers, cookies = cookies)
 
         while response.status_code != 200:
             response = requests.get(url, headers=headers)

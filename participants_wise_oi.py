@@ -36,7 +36,7 @@ class GetPwoiData:
     def fetch_data(self):
         for date in self.last_5_days_date_string:
             try:
-                url = f"https://www1.nseindia.com/content/nsccl/fao_participant_oi_{date}.csv"
+                url = f"https://archives.nseindia.com/content/nsccl/fao_participant_oi_{date}.csv"
                 response = requests.get(url)
                 if response.status_code == 200:
                     return (response.content, datetime.datetime.strptime(date, "%d%m%Y"))
